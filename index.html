@@ -21,6 +21,23 @@
             align-items: center;
             min-height: 100%;
         }
+
+        @keyframes dash {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        svg #slogan path {
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 0.5px;
+            stroke-dashoffset: -200;
+            stroke-dasharray: 200;
+            stroke-linecap: butt;
+            stroke-linejoin: round;
+            animation: dash 2s ease-in-out forwards;
+        }
     </style>
 </head>
 <body>
