@@ -1,0 +1,44 @@
+.avatar {
+  width: 256px;
+  height: 256px;
+  background-size: contain;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .inner {
+
+    position: relative;
+    min-width: 500px;
+    width: 50%;
+    display: flex;
+    text-align: left;
+  }
+
+  .name {
+    position: absolute;
+    left: 256px;
+    top: -30px;
+
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+    background: rgba(0,0,0, 0.5);
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+
+    border: 1px solid rgba(255,255,255, 0.1);
+    border-radius: 20px;
+  }
+}
+
+.text {
+  font-size: 22px;
+  padding: 30px;
+}
