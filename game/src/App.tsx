@@ -447,7 +447,7 @@ const cakeBranch: Array<IScriptItem> = [
     bg: 'cake',
     avatar: 'cake',
     name: 'Торт',
-    text: 'Там много интересного! (тебе до безумия понравится)',
+    text: 'Там много интересного! Тебе до безумия понравится',
     clickAway: true,
   },
   {
@@ -455,13 +455,13 @@ const cakeBranch: Array<IScriptItem> = [
     avatar: 'sus',
     name: 'Либран',
     text: '...',
-    clickAway: true,
+    clickAway: true
   },
   {
     bg: 'cake',
     avatar: 'cake',
     name: 'Торт',
-    text: '',
+    text: 'ДО',
     clickAway: true,
     Component: ()=>{
       return <img src={process.env.PUBLIC_URL + "/cake.png"}></img>
@@ -471,7 +471,7 @@ const cakeBranch: Array<IScriptItem> = [
     bg: 'cake',
     avatar: 'cake',
     name: 'Торт',
-    text: '',
+    text: 'БЕЗУМИЯ',
     clickAway: true,
     Component: ()=>{
       return <img src={process.env.PUBLIC_URL + "/cake.png"} style={{height: '60vh', 'animation': 'shake 0.82s infinite cubic-bezier(.36,.07,.19,.97) both'}}></img>
