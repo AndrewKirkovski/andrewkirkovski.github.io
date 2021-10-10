@@ -491,7 +491,7 @@ const cakeBranch: Array<IScriptItem> = [
     bg: 'cake',
     avatar: 'nope',
     name: 'Либран',
-    text: 'Я решаю немного поспать и перепустить вселенную пару раз',
+    text: 'Или перезапустить вселенную пару раз',
     clickAway: false,
     Component: ()=>{
       window.location.reload();
