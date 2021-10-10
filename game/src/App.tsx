@@ -515,14 +515,14 @@ const cakeBranch: Array<IScriptItem> = [
     bg: 'cake',
     avatar: 'nope',
     name: 'Либранос',
-    text: 'Или перезапустить вселенную >.<',
+    text: 'Или можно перезапустить вселенную >.<',
     clickAway: true,
   },
   {
     bg: 'cake',
     avatar: 'nope',
     name: 'Либранос',
-    text: 'Или перезапустить вселенную >.<',
+    text: 'Или можно перезапустить вселенную >.<',
     clickAway: false,
     Component: ()=>{
       window.location.reload();
