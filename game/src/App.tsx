@@ -426,7 +426,7 @@ const cakeBranch: Array<IScriptItem> = [
     bg: 'cake',
     avatar: 'cakewink',
     name: 'Торт',
-    text: 'Слушай!!!!!!!',
+    text: 'Слушай! Слушай!!!!!!!',
     clickAway: true,
   },
   {
@@ -489,6 +489,16 @@ const cakeBranch: Array<IScriptItem> = [
   },
   {
     bg: 'cake',
+    avatar: 'cake',
+    name: 'Торт',
+    text: '',
+    clickAway: true,
+    Component: ()=>{
+      return <div style={{position: 'absolute', top: 0, 'right': 0, 'bottom': 0, 'left': 0, backgroundColor: 'black', zIndex: 1000}}></div>
+    }
+  },
+  {
+    bg: 'cake',
     avatar: 'okay',
     name: 'Либран',
     text: 'Кажется надо больше спать',
@@ -504,15 +514,15 @@ const cakeBranch: Array<IScriptItem> = [
   {
     bg: 'cake',
     avatar: 'nope',
-    name: 'Либран',
-    text: 'Или перезапустить вселенную пару раз',
+    name: 'Либранос',
+    text: 'Или перезапустить вселенную >.<',
     clickAway: true,
   },
   {
     bg: 'cake',
     avatar: 'nope',
-    name: 'Либран',
-    text: 'Или перезапустить вселенную пару раз',
+    name: 'Либранос',
+    text: 'Или перезапустить вселенную >.<',
     clickAway: false,
     Component: ()=>{
       window.location.reload();
