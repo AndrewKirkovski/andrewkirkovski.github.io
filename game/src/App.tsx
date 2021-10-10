@@ -419,14 +419,35 @@ const cakeBranch: Array<IScriptItem> = [
     bg: 'cake',
     avatar: 'cake',
     name: 'Торт',
-    text: 'Пойдем со мной!',
+    text: 'Слушай!',
+    clickAway: true,
+  },
+  {
+    bg: 'cake',
+    avatar: 'cakewink',
+    name: 'Торт',
+    text: 'Слушай!!!!!!!',
     clickAway: true,
   },
   {
     bg: 'cake',
     avatar: 'cake',
     name: 'Торт',
-    text: 'Я покажу тебе новый мир!',
+    text: 'Летим со мной!',
+    clickAway: true,
+  },
+  {
+    bg: 'cake',
+    avatar: 'cake',
+    name: 'Торт',
+    text: 'Там много интересного!',
+    clickAway: true,
+  },
+  {
+    bg: 'cake',
+    avatar: 'cake',
+    name: 'Торт',
+    text: 'Там много интересного! (тебе до безумия понравится)',
     clickAway: true,
   },
   {
@@ -453,7 +474,7 @@ const cakeBranch: Array<IScriptItem> = [
     text: '',
     clickAway: true,
     Component: ()=>{
-      return <img src={process.env.PUBLIC_URL + "/cake.png"} style={{height: '60vh'}}></img>
+      return <img src={process.env.PUBLIC_URL + "/cake.png"} style={{height: '60vh', 'animation': 'shake 0.82s infinite cubic-bezier(.36,.07,.19,.97) both'}}></img>
     }
   },
   {
@@ -463,7 +484,7 @@ const cakeBranch: Array<IScriptItem> = [
     text: '',
     clickAway: true,
     Component: ()=>{
-      return <img src={process.env.PUBLIC_URL + "/cake.png"} style={{height: '120vh', transform: 'translate(0, -20vh)'}}></img>
+      return <img src={process.env.PUBLIC_URL + "/cake.png"} style={{height: '120vh', transform: 'translate(0, -20vh)', 'animation': 'shake2 0.82s infinite cubic-bezier(.36,.07,.19,.97) both'}}></img>
     }
   },
   {
