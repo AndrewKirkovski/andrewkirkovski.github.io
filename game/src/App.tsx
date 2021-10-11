@@ -617,7 +617,7 @@ const spamtronBranch: Array<IScriptItem> = [
     bg: 'home',
     avatar: 'spamtron',
     name: 'Spamton',
-    text: 'EAHAEHAEHAEHAEH!!! LIB! RUN! YOU AND ME. ARE ALREADY [Friend Request Accepted]',
+    text: 'EAHAEHAEHAEHAEH!!! LeeB[RUN]! YOU AND ME. ARE ALREADY [Friend Request Accepted]',
     Component: SpamtronNoControl,
     clickAway: true,
   },
