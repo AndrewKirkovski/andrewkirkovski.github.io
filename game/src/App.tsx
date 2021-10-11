@@ -535,14 +535,14 @@ const spamtronBranch: Array<IScriptItem> = [
     code: 'spamtron',
     bg: 'home',
     avatar: 'spamtron',
-    name: 'spamtron',
+    name: 'spamton',
     text: 'HEY EVERY                    !',
     Component: Spamtron,
     clickAway: true,
   },{
     bg: 'home',
     avatar: 'spamtron',
-    name: 'spamTRON',
+    name: 'spamtON',
     text: 'HEY EVERY                    ! You',
     Component: Spamtron,
     clickAway: true,
@@ -550,7 +550,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'spamTRon',
+    name: 'spaM++on',
     text: 'LIB!!!run  YOU [Little Kitten Playing]! I KNEW YOU\'D COME HERE [[On A Saturday Night]]!',
     Component: Spamtron,
     clickAway: true,
@@ -558,7 +558,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'Spam tron',
+    name: 'Spam ton',
     text: 'LOOKING FOR [Irresistable Deals] THAT WILL [Blow Your Mind!?]',
     Component: Spamtron,
     clickAway: true,
@@ -567,7 +567,7 @@ const spamtronBranch: Array<IScriptItem> = [
     code: 'spamtron',
     bg: 'home',
     avatar: 'spamtron',
-    name: 'sp@mtr@n',
+    name: 'sp@mt@n',
     text: '[[A Great Deal]] IS WAITING For [[A LimiTed Time Only!]] A HELL-DRILLING [[Cake-Ready Body]]',
     Component: Spamtron,
     clickAway: true,
@@ -576,7 +576,7 @@ const spamtronBranch: Array<IScriptItem> = [
     code: '$$$$tron',
     bg: 'home',
     avatar: 'spamtron',
-    name: 'spamtron',
+    name: 'SPAMTRON',
     text: 'DEALS SO GOOD I\'LL [$!$$] MYSELF!',
     Component: Spamtron,
     clickAway: true,
@@ -584,7 +584,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'spAmtrOn69',
+    name: 'spAmtOn69',
     text: 'LIB RUN LOOK!! YOU ARE [1000th Visitor]!!',
     Component: Spamtron,
     clickAway: true,
@@ -592,7 +592,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'Спамтрон',
+    name: 'Спамтон',
     text: 'JUST 9.99$ [[Only For You]]',
     Component: Spamtron,
     clickAway: true,
@@ -600,7 +600,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'Спамтрон',
+    name: '[Ad Blocked]',
     text: 'DON\'T FORGET TO [Like and Subscribe] FOR MORE [Hyperlink Blocked]!',
     Component: Spamtron,
     clickAway: true,
@@ -608,7 +608,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'Sп@мтроH',
+    name: 'Sп@мтоH',
     text: 'ALL HOT [кукурузные качанчики] [in your area]',
     Component: Spamtron,
     clickAway: true,
@@ -616,7 +616,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'Spamtron',
+    name: 'Spamton',
     text: 'EAHAEHAEHAEHAEH!!! LIB! RUN! YOU AND ME. ARE ALREADY [Friend Request Accepted]',
     Component: SpamtronNoControl,
     clickAway: true,
@@ -624,7 +624,7 @@ const spamtronBranch: Array<IScriptItem> = [
   {
     bg: 'home',
     avatar: 'spamtron',
-    name: 'Spamtron',
+    name: 'Spamton',
     text: 'ENL4RGE Yourself',
     Component: SpamtronNoControl,
     clickAway: true,
@@ -635,7 +635,7 @@ const spamtronBranch: Array<IScriptItem> = [
     name: 'Рё',
     text: 'Окей, если ты это видишь, то у тебя очень хороший комп или ты умеешь искать исходники xD',
     Component: SpamtronNoControl,
-    clickAway: true,
+    clickAway: false,
   },
 ]
 
