@@ -21,6 +21,13 @@
   width: 100%;
   min-height: 256px;
   flex-shrink: 0;
+
+  :global(.spamtron) & {
+    background: black;
+    border-radius: 0;
+    border: 3px solid white;
+    box-shadow: none;
+  }
 }
 
 .content {

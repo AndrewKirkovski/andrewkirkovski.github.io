@@ -1,12 +1,11 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { goto } from './goto';
 import { playSound } from './playSound';
 import { Screen } from './Screeen';
 import { ChooseCake, ChoosePlace, Stuff } from './ChoosePlace';
+import { Spamtron, SpamtronNoControl } from './Spamtron';
 import { Text } from './Text';
 import './App.scss';
-
-let musicOn: boolean = false;
 
 interface IScriptItem {
   code?: string;
@@ -531,6 +530,115 @@ const cakeBranch: Array<IScriptItem> = [
   },
 ]
 
+const spamtronBranch: Array<IScriptItem> = [
+  {
+    code: 'spamtron',
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'spamtron',
+    text: 'HEY EVERY                    !',
+    Component: Spamtron,
+    clickAway: true,
+  },{
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'spamTRON',
+    text: 'HEY EVERY                    ! You',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'spamTRon',
+    text: 'LIB!!!run  YOU [Little Kitten Playing]! I KNEW YOU\'D COME HERE [[On A Saturday Night]]!',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'Spam tron',
+    text: 'LOOKING FOR [Irresistable Deals] THAT WILL [Blow Your Mind!?]',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    code: 'spamtron',
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'sp@mtr@n',
+    text: '[[A Great Deal]] IS WAITING For [[A LimiTed Time Only!]] A HELL-DRILLING [[Cake-Ready Body]]',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    code: '$$$$tron',
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'spamtron',
+    text: 'DEALS SO GOOD I\'LL [$!$$] MYSELF!',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'spAmtrOn69',
+    text: 'LIB RUN LOOK!! YOU ARE [1000th Visitor]!!',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'Спамтрон',
+    text: 'JUST 9.99$ [[Only For You]]',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'Спамтрон',
+    text: 'DON\'T FORGET TO [Like and Subscribe] FOR MORE [Hyperlink Blocked]!',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'Sп@мтроH',
+    text: 'ALL HOT [кукурузные качанчики] [in your area]',
+    Component: Spamtron,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'Spamtron',
+    text: 'EAHAEHAEHAEHAEH!!! LIB! RUN! YOU AND ME. ARE ALREADY [Friend Request Accepted]',
+    Component: SpamtronNoControl,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'spamtron',
+    name: 'Spamtron',
+    text: 'ENL4RGE Yourself',
+    Component: SpamtronNoControl,
+    clickAway: true,
+  },
+  {
+    bg: 'home',
+    avatar: 'ryo',
+    name: 'Рё',
+    text: 'Окей, если ты это видишь, то у тебя очень хороший комп или ты умеешь искать исходники xD',
+    Component: SpamtronNoControl,
+    clickAway: true,
+  },
+]
+
 const stuffBranch: Array<IScriptItem> = [
   {
     code: 'stuff',
@@ -612,6 +720,7 @@ const script: Array<IScriptItem> = [
   ...youtubeBranch,
   ...cakeBranch,
   ...stuffBranch,
+  ...spamtronBranch,
 ];
 
 function App() {
