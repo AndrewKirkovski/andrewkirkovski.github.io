@@ -5,6 +5,15 @@
   src: url('Nineteen-Eighty-Seven.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('PressStart2P.woff2') format('woff2'),
+  url('PressStart2P.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 $font: 'Neucha', sans-serif;
 
 body,html {
@@ -25,11 +34,11 @@ body {
   font-size: 25px;
 
   &.spamtron {
-    font-family: 'Nineteen Eighty Seven', sans-serif !important;
+    font-family: 'Press Start 2P', sans-serif !important;
     font-size: 16px !important;
     line-height: 30px;
     * {
-      font-family: 'Nineteen Eighty Seven', sans-serif !important;
+      font-family: 'Press Start 2P', sans-serif !important;
       font-size: 16px !important;
     }
   }

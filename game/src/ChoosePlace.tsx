@@ -20,7 +20,7 @@ export const ChooseCake = ({ onDone }: { onDone: (goto?: string) => void }) => {
     <div className={styles.choise} onClick={() => onDone('cake')}>Взять Торт</div>
     <div className={styles.choise} onClick={() => onDone('youtube')}>Нажать Кнопку</div>
     <div className={styles.choise} onClick={() => onDone('stuff')}>Подумать о вечном</div>
-    <div className={styles.choise} style={{fontFamily: 'Nineteen Eighty Seven', fontSize: '16px'}} onClick={() => {
+    <div className={styles.choise} style={{ fontFamily: '\'Press Start 2P\'', fontSize: '16px'}} onClick={() => {
       onDone('spamtron');
       document.body.classList.add('spamtron');
       playSound('spamtron', true)
