@@ -4,7 +4,7 @@ import styles from './Spamtron.module.scss';
 export const Spamtron = ({onDone}: { onDone: (goto?: string) => void }) => {
   const [images, setImages] = useState<Array<[number, number]>>([[
     Math.random() * (window.innerWidth - 200),
-    Math.random() * (window.innerHeight - 296),
+    Math.random() * (window.innerHeight - 316),
   ]]);
 
   const spawn = useCallback(()=>{
@@ -14,7 +14,7 @@ export const Spamtron = ({onDone}: { onDone: (goto?: string) => void }) => {
       for(let i=0;i<target;i++) {
         n.push([
           Math.random() * (window.innerWidth - 200),
-          Math.random() * (window.innerHeight - 296),
+          Math.random() * (window.innerHeight - 316),
         ]);
       }
       return n;
