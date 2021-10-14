@@ -360,8 +360,7 @@ const youtubeBranch: Array<IScriptItem> = [
     text: 'Кнопка нажалась, видео запускается',
     clickAway: false,
     Component: () => {
-      alert('тут видео')
-      // goto('https://coub.com/view/1mwt6i');
+      goto('https://youtu.be/gJiJF-pWYyQ');
       return null;
     }
   },
