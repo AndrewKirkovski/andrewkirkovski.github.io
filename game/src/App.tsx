@@ -25,6 +25,12 @@ const introBranch: Array<IScriptItem> = [
     avatar: 'normal',
     name: 'Либуся',
     text: 'Ой, где это я',
+    Component: ({ onDone }) => {
+      if (window.location.search !== '?clockworkorange') {
+        goto('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+      }
+      return null;
+    },
     clickAway: true,
   },
   {
@@ -112,6 +118,7 @@ const introBranch: Array<IScriptItem> = [
     clickAway: true,
   },
   {
+    code: 'mobile',
     bg: 'stars',
     avatar: 'think',
     name: 'Либуся',
@@ -130,6 +137,18 @@ const introBranch: Array<IScriptItem> = [
     avatar: 'sus',
     name: 'Либуся',
     text: '(Надеюсь это мои реальные мысли а не заскриптованный текст в коде)',
+    Component: ({ onDone }) => {
+      if (window.innerWidth < 1024) {
+        setTimeout(() => {
+          alert('Серьезно, найди уже свой ноут xD');
+          alert('Я настаиваю xD');
+        }, 10);
+        setTimeout(()=>{
+          onDone('mobile')
+        }, 10);
+      }
+      return null;
+    },
     clickAway: true,
   },
   {
@@ -462,8 +481,8 @@ const cakeBranch: Array<IScriptItem> = [
     name: 'Торт',
     text: 'ДО',
     clickAway: true,
-    Component: ()=>{
-      return <img src={process.env.PUBLIC_URL + "/cake.png"}></img>
+    Component: () => {
+      return <img src={process.env.PUBLIC_URL + '/cake.png'}></img>
     }
   },
   {
@@ -472,8 +491,11 @@ const cakeBranch: Array<IScriptItem> = [
     name: 'Торт',
     text: 'БЕЗУМИЯ',
     clickAway: true,
-    Component: ()=>{
-      return <img src={process.env.PUBLIC_URL + "/cake.png"} style={{height: '60vh', 'animation': 'shake 0.82s infinite cubic-bezier(.36,.07,.19,.97) both'}}></img>
+    Component: () => {
+      return <img src={process.env.PUBLIC_URL + '/cake.png'} style={{
+        height: '60vh',
+        'animation': 'shake 0.82s infinite cubic-bezier(.36,.07,.19,.97) both'
+      }}></img>
     }
   },
   {
@@ -482,8 +504,12 @@ const cakeBranch: Array<IScriptItem> = [
     name: 'Торт',
     text: '',
     clickAway: true,
-    Component: ()=>{
-      return <img src={process.env.PUBLIC_URL + "/cake.png"} style={{height: '120vh', transform: 'translate(0, -20vh)', 'animation': 'shake2 0.82s infinite cubic-bezier(.36,.07,.19,.97) both'}}></img>
+    Component: () => {
+      return <img src={process.env.PUBLIC_URL + '/cake.png'} style={{
+        height: '120vh',
+        transform: 'translate(0, -20vh)',
+        'animation': 'shake2 0.82s infinite cubic-bezier(.36,.07,.19,.97) both'
+      }}></img>
     }
   },
   {
@@ -492,8 +518,16 @@ const cakeBranch: Array<IScriptItem> = [
     name: 'Торт',
     text: '',
     clickAway: true,
-    Component: ()=>{
-      return <div style={{position: 'absolute', top: 0, 'right': 0, 'bottom': 0, 'left': 0, backgroundColor: 'black', zIndex: 1000}}></div>
+    Component: () => {
+      return <div style={{
+        position: 'absolute',
+        top: 0,
+        'right': 0,
+        'bottom': 0,
+        'left': 0,
+        backgroundColor: 'black',
+        zIndex: 1000
+      }}></div>
     }
   },
   {
@@ -523,7 +557,7 @@ const cakeBranch: Array<IScriptItem> = [
     name: 'Либранос',
     text: 'Или можно перезапустить вселенную >.<',
     clickAway: false,
-    Component: ()=>{
+    Component: () => {
       window.location.reload();
       return null;
     }
@@ -539,7 +573,7 @@ const spamtronBranch: Array<IScriptItem> = [
     text: 'HEY EVERY                    !',
     Component: Spamtron,
     clickAway: true,
-  },{
+  }, {
     bg: 'home',
     avatar: 'spamtron',
     name: 'spamtON',
@@ -592,7 +626,7 @@ const spamtronBranch: Array<IScriptItem> = [
     bg: 'home',
     avatar: 'spamtron',
     name: 'sp@mt@n',
-    text: '[[A Great Deal]] IS WAITING For [[A LimiTed Time Only!]] A HELL-DRILLING [[Cake-Ready Body]]',
+    text: '[[A Great Deal]] IS WAITING For [[A LimiTed Time Only!]] A HEAVEN-PIERCING [[Cake-Ready Body]]',
     Component: Spamtron,
     clickAway: true,
   },
@@ -757,7 +791,7 @@ function App() {
 
   return (
     <div className="App" onClick={onClick}>
-      <Screen bg={`${process.env.PUBLIC_URL + "/"}${step.bg}-bg.jpg`} Component={step.Component} onDone={onDone}>
+      <Screen bg={`${process.env.PUBLIC_URL + '/'}${step.bg}-bg.jpg`} Component={step.Component} onDone={onDone}>
         <Text avatar={step.avatar} name={step.name}>
           {step.text}
         </Text>
