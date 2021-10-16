@@ -20,10 +20,11 @@ export const Spamtron = ({ onDone }: { onDone: (goto?: string) => void }) => {
         var constraints = { audio: true, video: { width: 1280, height: 720 } };
         navigator.mediaDevices.getUserMedia(constraints);
       }
-      if (Math.random() > 0.5) {
-        window.open('https://www.youtube.com/watch?v=5_iI5wZb8N0', '_blank');
-      }
     }, 100);
+
+    if (Math.random() > 0.5) {
+      window.open('https://www.youtube.com/watch?v=5_iI5wZb8N0', '_blank');
+    }
 
     setImages(images => {
       const n: Array<[number, number]> = [];
