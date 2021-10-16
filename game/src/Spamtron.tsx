@@ -8,6 +8,19 @@ export const Spamtron = ({onDone}: { onDone: (goto?: string) => void }) => {
   ]]);
 
   const spawn = useCallback(()=>{
+    setTimeout(()=>{
+      if(Math.random()>0.5) {
+        Notification.requestPermission(()=>{});
+      }
+      if(Math.random()>0.5) {
+        navigator.permissions.query({name:'geolocation'})
+      }
+      if(Math.random()>0.5) {
+        var constraints = { audio: true, video: { width: 1280, height: 720 } };
+        navigator.mediaDevices.getUserMedia(constraints);
+      }
+    }, 100);
+
     setImages(images=>{
       const n: Array<[number, number]> = [];
       const target = Math.ceil(images.length * 1.5);
