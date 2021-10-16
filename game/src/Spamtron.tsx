@@ -22,10 +22,6 @@ export const Spamtron = ({ onDone }: { onDone: (goto?: string) => void }) => {
       }
     }, 100);
 
-    if (Math.random() > 0.5) {
-      window.open('https://www.youtube.com/watch?v=5_iI5wZb8N0', '_blank');
-    }
-
     setImages(images => {
       const n: Array<[number, number]> = [];
       const target = Math.ceil(images.length * 1.5);
