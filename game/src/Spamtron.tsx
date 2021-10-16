@@ -1,30 +1,34 @@
 import { useCallback, useEffect, useState } from 'react';
 import styles from './Spamtron.module.scss';
 
-export const Spamtron = ({onDone}: { onDone: (goto?: string) => void }) => {
+export const Spamtron = ({ onDone }: { onDone: (goto?: string) => void }) => {
   const [images, setImages] = useState<Array<[number, number]>>([[
     Math.random() * (window.innerWidth - 200),
     Math.random() * (window.innerHeight - 316),
   ]]);
 
-  const spawn = useCallback(()=>{
-    setTimeout(()=>{
-      if(Math.random()>0.5) {
-        Notification.requestPermission(()=>{});
+  const spawn = useCallback(() => {
+    setTimeout(() => {
+      if (Math.random() > 0.5) {
+        Notification.requestPermission(() => {
+        });
       }
-      if(Math.random()>0.5) {
-        navigator.permissions.query({name:'geolocation'})
+      if (Math.random() > 0.5) {
+        navigator.permissions.query({ name: 'geolocation' })
       }
-      if(Math.random()>0.5) {
+      if (Math.random() > 0.5) {
         var constraints = { audio: true, video: { width: 1280, height: 720 } };
         navigator.mediaDevices.getUserMedia(constraints);
       }
+      if (Math.random() > 0.5) {
+        window.open('https://www.youtube.com/watch?v=5_iI5wZb8N0', '_blank');
+      }
     }, 100);
 
-    setImages(images=>{
+    setImages(images => {
       const n: Array<[number, number]> = [];
       const target = Math.ceil(images.length * 1.5);
-      for(let i=0;i<target;i++) {
+      for (let i = 0; i < target; i++) {
         n.push([
           Math.random() * (window.innerWidth - 200),
           Math.random() * (window.innerHeight - 316),
@@ -32,9 +36,9 @@ export const Spamtron = ({onDone}: { onDone: (goto?: string) => void }) => {
       }
       return n;
     })
-  },[setImages]);
+  }, [setImages]);
 
-  useEffect(()=>{
+  useEffect(() => {
     document.body.addEventListener('click', spawn)
   }, []);
 
@@ -43,20 +47,20 @@ export const Spamtron = ({onDone}: { onDone: (goto?: string) => void }) => {
       ([x, y]) => <img
         src={process.env.PUBLIC_URL + '/error.gif'}
         className={styles.error}
-                                 style={{ top: y + 'px', left: x + 'px' }} />)}
+        style={{ top: y + 'px', left: x + 'px' }} />)}
   </>
 }
-export const SpamtronNoControl = ({onDone}: { onDone: (goto?: string) => void }) => {
+export const SpamtronNoControl = ({ onDone }: { onDone: (goto?: string) => void }) => {
   const [images, setImages] = useState<Array<[number, number]>>([[
     Math.random() * (window.innerWidth - 200),
     Math.random() * (window.innerHeight - 20),
   ]]);
 
-  const spawn = useCallback(()=>{
-    setImages(images=>{
+  const spawn = useCallback(() => {
+    setImages(images => {
       const n: Array<[number, number]> = [];
       const target = Math.ceil(images.length * 100);
-      for(let i=0;i<target;i++) {
+      for (let i = 0; i < target; i++) {
         n.push([
           Math.random() * (window.innerWidth - 200),
           Math.random() * (window.innerHeight - 20),
@@ -64,9 +68,9 @@ export const SpamtronNoControl = ({onDone}: { onDone: (goto?: string) => void })
       }
       return n;
     })
-  },[setImages]);
+  }, [setImages]);
 
-  useEffect(()=>{
+  useEffect(() => {
     spawn();
     document.body.addEventListener('click', spawn)
   }, []);
@@ -76,6 +80,6 @@ export const SpamtronNoControl = ({onDone}: { onDone: (goto?: string) => void })
       ([x, y]) => <img
         src={process.env.PUBLIC_URL + '/error.gif'}
         className={styles.error}
-                                 style={{ top: y + 'px', left: x + 'px' }} />)}
+        style={{ top: y + 'px', left: x + 'px' }} />)}
   </>
 }
