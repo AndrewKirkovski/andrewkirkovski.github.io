@@ -360,7 +360,12 @@ const youtubeBranch: Array<IScriptItem> = [
     text: 'Кнопка нажалась, видео запускается',
     clickAway: false,
     Component: () => {
-      goto('https://youtu.be/gJiJF-pWYyQ');
+      const hash = window.location.hash;
+      if(hash) {
+        goto('https://youtu.be/'+hash.substr(1));
+      } else {
+        goto('https://youtu.be/05LSuSIFemY?t=2232');
+      }
       return null;
     }
   },
