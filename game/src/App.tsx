@@ -671,7 +671,7 @@ const spamtronBranch: Array<IScriptItem> = [
     bg: 'home',
     avatar: 'spamtron',
     name: 'Spamton',
-    text: '[[cheap flights]] TO [[censured]] AVAILABLE NOW',
+    text: '[[cheap flights]] TO [[Riga]] AVAILABLE NOW',
     Component: SpamtronNoControl,
     clickAway: true,
   },
