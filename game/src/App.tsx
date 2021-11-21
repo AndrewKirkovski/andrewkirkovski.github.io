@@ -647,7 +647,7 @@ const spamtronBranch: Array<IScriptItem> = [
     bg: 'home',
     avatar: 'spamtron',
     name: 'Спамтон',
-    text: 'JUST 9.99$ [[Only For You]]',
+    text: 'JUST 9.99$ [[Only For You]], [[Tilt Unreal]]',
     Component: Spamtron,
     clickAway: true,
   },
@@ -736,6 +736,13 @@ const stuffBranch: Array<IScriptItem> = [
     avatar: 'okk',
     name: 'Либран',
     text: 'Что происходит',
+    clickAway: true,
+  },
+  {
+    bg: 'zen',
+    avatar: 'okk',
+    name: 'Либран',
+    text: 'Что происходит, я сейчас откисну',
     clickAway: true,
   },
   {
