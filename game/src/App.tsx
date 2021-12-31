@@ -123,9 +123,9 @@ const introBranch: Array<IScriptItem> = [
     text: 'Ой, где это я',
     Component: ({ onDone }) => {
       if (window.location.search === '?lu2022') {
-        goto('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-      } else if (window.location.search !== '?clockworkorange') {
         onDone('christmas');
+      } else if (window.location.search !== '?clockworkorange') {
+        goto('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
       }
       return null;
     },
