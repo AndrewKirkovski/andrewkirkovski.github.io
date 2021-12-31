@@ -18,6 +18,85 @@ interface IScriptItem {
   Component?: React.FC<{ onDone: (goto?: string) => void }>,
 }
 
+const introAltBranch: Array<IScriptItem> = [
+  {
+    music: 'music',
+    bg: 'stars',
+    code: 'christmas',
+    avatar: 'think',
+    name: 'Либуся',
+    text: 'Так, погодите, я тут уже был',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: 'Дада, был :)',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: 'В этот раз без выкрутасов',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: 'Я',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: 'Тебя',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: ':3',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: ':33',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: ':333',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: 'Очень',
+    clickAway: true,
+  },
+  {
+    bg: 'stars',
+    avatar: 'ryo',
+    name: '',
+    text: 'И хочу просто поздравить с НГ',
+    clickAway: false,
+    Component: ({ onDone }) => {
+      goto('https://youtu.be/h-p-IjoG-84');
+      return null;
+    },
+  },
+]
+
 const introBranch: Array<IScriptItem> = [
   {
     music: 'music',
@@ -26,8 +105,10 @@ const introBranch: Array<IScriptItem> = [
     name: 'Либуся',
     text: 'Ой, где это я',
     Component: ({ onDone }) => {
-      if (window.location.search !== '?clockworkorange') {
+      if (window.location.search === '?lu2022') {
         goto('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+      } else if (window.location.search !== '?clockworkorange') {
+        onDone('christmas');
       }
       return null;
     },
@@ -774,6 +855,7 @@ const script: Array<IScriptItem> = [
   ...cakeBranch,
   ...stuffBranch,
   ...spamtronBranch,
+  ...introAltBranch,
 ];
 
 function App() {
