@@ -18,8 +18,8 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80vw;
-            height: 80vh;
+            width: 100vw;
+            height: 100vh;
             background: url('popcatbase1.png') 50% 100% no-repeat;
             background-size: contain;
         }
@@ -45,15 +45,11 @@
   }
   const body = document.body;
   const cat = document.querySelector('.cat');
-  body.addEventListener('mousedown', () => {
+  body.addEventListener('pointerdown', () => {
     cat.classList.add('cat2');
     playSound();
   })
-  body.addEventListener('touchstart', () => {
-    cat.classList.add('cat2');
-    playSound();
-  })
-  body.addEventListener('touchend', () => {
+  body.addEventListener('pointerup', () => {
     cat.classList.remove('cat2');
   })
 </script>
