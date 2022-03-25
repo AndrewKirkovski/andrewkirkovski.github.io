@@ -1,0 +1,48 @@
+<html>
+<head>
+    <link rel="preload" href="pop1.mp3" as="audio">
+    <link rel="preload" href="pop2.mp3" as="audio">
+    <link rel="preload" href="pop3.mp3" as="audio">
+    <link rel="preload" href="pop4.mp3" as="audio">
+    <link rel="preload" href="popcatbase2.png" as="image">
+    <style>
+        .cat {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80vw;
+            height: 80vh;
+            background: url('popcatbase1.png') 50% 100% no-repeat;
+            background-size: contain;
+        }
+
+        .cat2 {
+            background: url('popcatbase2.png') 50% 100% no-repeat;
+            background-size: contain;
+        }
+    </style>
+
+</head>
+<body>
+<div class="cat">
+
+</div>
+<script>
+  const playSound = () => {
+    const audio = document.createElement('audio');
+    audio.src = 'pop' + (1 + Math.floor(Math.random() * 4)) + '.mp3';
+    audio.play();
+  }
+  const body = document.body;
+  const cat = document.querySelector('.cat');
+  body.addEventListener('mousedown', () => {
+    cat.classList.add('cat2');
+    playSound();
+  })
+  body.addEventListener('mouseup', () => {
+    cat.classList.remove('cat2');
+  })
+</script>
+</body>
+</html>
