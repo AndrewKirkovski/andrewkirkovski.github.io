@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Дима, я тебя люблю</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="preload" href="pop1.mp3" as="audio">
     <link rel="preload" href="pop2.mp3" as="audio">
     <link rel="preload" href="pop3.mp3" as="audio">
@@ -48,7 +49,11 @@
     cat.classList.add('cat2');
     playSound();
   })
-  body.addEventListener('mouseup', () => {
+  body.addEventListener('touchstart', () => {
+    cat.classList.add('cat2');
+    playSound();
+  })
+  body.addEventListener('touchend', () => {
     cat.classList.remove('cat2');
   })
 </script>
