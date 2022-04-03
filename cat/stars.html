@@ -39,18 +39,16 @@
 </div>
 <script>
   /** Дима, если ты это видишь, ты вообще молодец */
+  const audio = document.createElement('audio');
+  audio.src = 'stars.mp3';
+  audio.loop = true;
 
   let playSound = () => {
-    const audio = document.createElement('audio');
-    audio.src = 'stars.mp3';
-    audio.loop = true;
     audio.play();
     playSound = ()=>undefined;
-  }
-  document.body.addEventListener('pointerdown', () => {
-    playSound();
     document.getElementById('tap').style.opacity=0;
-  });
+  }
+  document.body.addEventListener('click',playSound);
 </script>
 </body>
 </html>
