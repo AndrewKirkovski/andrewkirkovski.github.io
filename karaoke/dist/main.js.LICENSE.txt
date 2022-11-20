@@ -1,0 +1,100 @@
+/*! ./../node_modules/webpack/buildin/harmony-module.js */
+
+/*! ./../webpack/buildin/global.js */
+
+/*! ./../webpack/buildin/module.js */
+
+/*! ./audio_listener */
+
+/*! ./common */
+
+/*! ./midi */
+
+/*! ./pitches */
+
+/*! ./polywad */
+
+/*! ./presets */
+
+/*! ./sound_iterator */
+
+/*! ./wad.js */
+
+/*! exports provided: default */
+
+/*! exports provided: logStats, logMessage, context, noiseBuffer, constructEnv, constructFilter, requestAudioFile, constructVibrato, constructTremolo, constructReverb, constructPanning, constructDelay, constructCompressor, getConsent, permissionsGranted, setUpMic, setUpPanningOnPlay, setUpVibratoOnPlay, setUpTremoloOnPlay, setUpDelayOnPlay, setUpTunaOnPlay, plugEmIn, setUpEnvOnPlay, setUpFilterOnPlay, setUpReverbOnPlay, filterEnv, playEnv, setUpOscillator, createFilters */
+
+/*! exports provided: midiMap, assignMidiMap, midiInstrument, midiInputs */
+
+/*! exports provided: pitches, pitchesArray */
+
+/*! lodash */
+
+/*! no static exports found */
+
+/*! tunajs */
+
+/*!********************!*\
+  !*** ./src/wad.js ***!
+  \********************/
+
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
+
+/*!*********************!*\
+  !*** ./src/midi.js ***!
+  \*********************/
+
+/*!***********************!*\
+  !*** ./src/common.js ***!
+  \***********************/
+
+/*!************************!*\
+  !*** ./src/pitches.js ***!
+  \************************/
+
+/*!************************!*\
+  !*** ./src/polywad.js ***!
+  \************************/
+
+/*!************************!*\
+  !*** ./src/presets.js ***!
+  \************************/
+
+/*!*******************************!*\
+  !*** ./src/audio_listener.js ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/sound_iterator.js ***!
+  \*******************************/
+
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
+
+/*!*************************************!*\
+  !*** ./node_modules/tunajs/tuna.js ***!
+  \*************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/lodash/lodash.js ***!
+  \***************************************/
+
+/*!*******************************************!*\
+  !*** (webpack)/buildin/harmony-module.js ***!
+  \*******************************************/
+
+/**
+ * @license
+ * Lodash <https://lodash.com/>
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
