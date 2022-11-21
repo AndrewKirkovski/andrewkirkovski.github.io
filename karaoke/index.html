@@ -18,14 +18,18 @@
     <div id="timeline" class="position-relative"></div>
 </div>
 <div class="position-absolute">
-    <input type="file" id="file" accept=".mid" onchange="load()"/>
-    <button class="btn btn-primary" onclick="start()">
-        Start
-    </button>
-    <button class="btn btn-secondary" onclick="stop()">
-        Stop
-    </button>
+    <div class="card p-2 m-2" id="intro">
+
+        <p>Upload Midi here and playback will start automatically</p>
+        <p>Midi should be 1 track with 1 note at a time</p>
+        <p>Use youtube player to pause and rewind.</p>
+
+        <input type="file" id="file" accept=".mid" onchange="load()"/>
+    </div>
+
     <button class="btn btn-success" id="current">
+    </button>
+    <button class="btn btn-success" id="note">
     </button>
 </div>
 </body>
