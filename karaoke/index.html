@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:light">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         body {
             font-family: Montserrat;
@@ -46,6 +47,8 @@
 </div>
 
 <div class="position-absolute" style="right: 10px; bottom: 10px">
+    <input type="range" id="volume" name="volume" value="-16"
+           min="-50" max="-8" onchange="setvolume()"/>
     <button class="btn btn-success" id="current">
     </button>
     <button class="btn btn-success" id="note">
