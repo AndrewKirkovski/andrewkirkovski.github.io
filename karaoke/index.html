@@ -18,16 +18,20 @@
             height: 30px;
             transform: translateY(-50%);
             font-size: 8px;
-            box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 0 3px rgba(255,255,255,0.5);
+        }
+        iframe#player {
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
 
 
-<div id="player" class="position-relative" style="z-index: 1"></div>
+<div id="player" class="position-absolute" style="opacity: 0.9"></div>
 <div id="timeline-indicator" class="position-absolute"></div>
-<div id="timeline-wrapper" class="position-absolute" style="transform: translateX(0); top: 0; left: 0; right: 0; bottom: 0; overflow: hidden">
+<div id="timeline-wrapper" class="position-absolute" style="transform: translateX(0); top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none;">
     <div id="timeline" class="position-relative"></div>
 </div>
 <div class="position-absolute">
@@ -39,7 +43,9 @@
 
         <input type="file" id="file" accept=".mid" onchange="load()"/>
     </div>
+</div>
 
+<div class="position-absolute" style="right: 10px; bottom: 10px">
     <button class="btn btn-success" id="current">
     </button>
     <button class="btn btn-success" id="note">
