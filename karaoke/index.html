@@ -22,7 +22,7 @@
             box-shadow: 0px 0px 0 3px rgba(255,255,255,0.5);
         }
         .marker {
-            border: 10px solid #c945e6;
+            border: 10px solid #06ec1c;
             transform: scaleX(0.6);
         }
         .marker-up {
@@ -40,14 +40,16 @@
             height: 100vh;
         }
         .srt-item {
-            padding: 2px 10px;
-            border-radius: 0;
+            background: none;
+            border: none;
             white-space: pre;
-            font-size: 10px;
+            font-size: 40px;
+            text-shadow: 2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black, 2px 0 black, 0 2px black, -2px 0 black, 0 -2px black;
             text-align: left;
-            box-shadow: 0px 0px 0 3px rgba(255,255,255,0.5);
+            font-weight: bold;
 
-            top: calc(100vh - 50px);
+            left: 50vw;
+            transform: translateX(-50%);
         }
     </style>
 </head>
@@ -56,15 +58,22 @@
 
 <div id="player" class="position-absolute" style="opacity: 0.9"></div>
 <div id="timeline-indicator" class="position-absolute"></div>
+
+
 <div id="timeline-wrapper" class="position-absolute" style="transform: translateX(0); top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none;">
     <div id="timeline" class="position-relative"></div>
+</div>
+<div id="subtitles-wrapper" class="position-absolute" style="transform: translateX(0); top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none;">
+    <div id="subtitles" class="position-relative" style="top: 70vh"></div>
 </div>
 <div class="position-absolute">
     <div class="card p-2 m-2" id="intro">
         <select id="option">
             <option value="_3P6ztQXa-U">Music Only</option>
             <option value="UdF01auzvNI">Full Video (Official)</option>
-            <option value="jp6vKmTJu-4" selected>50% Voice</option>
+            <option value="jp6vKmTJu-4">50% Voice</option>
+            <option value="87vicgfhrbk" selected>2 semitones down</option>
+            <option value="7MlSWSCyI-w">50% Voice 2 semitones down</option>
             <option value="5YsY73ezDyw">Only Voice</option>
         </select>
         <p>Upload Midi here and playback will start automatically</p>
@@ -76,7 +85,7 @@
 </div>
 
 <div class="position-absolute" style="right: 10px; bottom: 10px">
-    <input type="range" id="volume" name="volume" value="-16"
+    <input type="range" id="volume" name="volume" value="-14"
            min="-50" max="-8" onchange="setvolume()"/>
     <button class="btn btn-success" id="current">
     </button>
