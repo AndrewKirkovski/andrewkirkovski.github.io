@@ -30,11 +30,15 @@ function App() {
 
   useEffect(()=>{
     if(playTone) {
+      setTimeout(() => {
         const now = Tone.now();
-        synth.triggerAttack(400, now)
+        synth.triggerAttack('C4', now)
+      });
     } else {
+      setTimeout(() => {
         const now = Tone.now();
         synth.triggerRelease(now)
+      });
     }
   }, [playTone]);
 
