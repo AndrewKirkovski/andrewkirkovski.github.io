@@ -101,6 +101,7 @@ function App() {
         <button onPointerDown={throttleKeyPressed}
                 onPointerUp={throttleKeyReleased}>This one works too</button>
         <p>{buttonActive?'Phone is ON':'Phone is OFF'}</p>
+        <p>build 004</p>
       </header>
     </div>
   );
