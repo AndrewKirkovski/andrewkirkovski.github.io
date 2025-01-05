@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/fluffy2/build/static/css/main.d9643877.css",
-    "main.js": "/fluffy2/build/static/js/main.58946150.js",
+    "main.js": "/fluffy2/build/static/js/main.7623d77b.js",
+    "static/media/music.mp3": "/fluffy2/build/static/media/music.fbd9fcbdafebb6821932.mp3",
+    "static/media/later.mp3": "/fluffy2/build/static/media/later.7e1849eb844db3fd5293.mp3",
     "static/media/boykisser.gif": "/fluffy2/build/static/media/boykisser.5597426e2fd262d63d6c.gif",
+    "static/media/connecting.mp3": "/fluffy2/build/static/media/connecting.95e331f1a847fd97c4e2.mp3",
+    "static/media/error.mp3": "/fluffy2/build/static/media/error.df5410d03d7c56276c5c.mp3",
     "static/media/boykisser2.jpg": "/fluffy2/build/static/media/boykisser2.a509fa535d103b235926.jpg",
     "index.html": "/fluffy2/build/index.html",
     "main.d9643877.css.map": "/fluffy2/build/static/css/main.d9643877.css.map",
-    "main.58946150.js.map": "/fluffy2/build/static/js/main.58946150.js.map"
+    "main.7623d77b.js.map": "/fluffy2/build/static/js/main.7623d77b.js.map"
   },
   "entrypoints": [
     "static/css/main.d9643877.css",
-    "static/js/main.58946150.js"
+    "static/js/main.7623d77b.js"
   ]
 }
