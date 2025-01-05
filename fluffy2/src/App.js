@@ -69,8 +69,12 @@ function App() {
     useEffect(() => {
         if (playTone) {
             musicAudio.volume = 0.6;
+            laterAudio.volume = 1;
+            errorAudio.volume = 1;
         } else {
             musicAudio.volume = 0;
+            laterAudio.volume = 0;
+            errorAudio.volume = 0;
         }
         if (playTone && !hasError) {
             connectingAudio.volume = 1;
@@ -159,7 +163,7 @@ function App() {
                 </button>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
-                <p>build 009</p>
+                <p>build 010</p>
             </header>
         </div>
     );

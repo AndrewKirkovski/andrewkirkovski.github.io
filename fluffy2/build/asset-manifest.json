@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fluffy2/build/static/css/main.d9643877.css",
-    "main.js": "/fluffy2/build/static/js/main.1958ca15.js",
+    "main.js": "/fluffy2/build/static/js/main.81160706.js",
     "static/media/music.mp3": "/fluffy2/build/static/media/music.fbd9fcbdafebb6821932.mp3",
     "static/media/later.mp3": "/fluffy2/build/static/media/later.7e1849eb844db3fd5293.mp3",
     "static/media/boykisser.gif": "/fluffy2/build/static/media/boykisser.5597426e2fd262d63d6c.gif",
@@ -10,10 +10,10 @@
     "static/media/boykisser2.jpg": "/fluffy2/build/static/media/boykisser2.a509fa535d103b235926.jpg",
     "index.html": "/fluffy2/build/index.html",
     "main.d9643877.css.map": "/fluffy2/build/static/css/main.d9643877.css.map",
-    "main.1958ca15.js.map": "/fluffy2/build/static/js/main.1958ca15.js.map"
+    "main.81160706.js.map": "/fluffy2/build/static/js/main.81160706.js.map"
   },
   "entrypoints": [
     "static/css/main.d9643877.css",
-    "static/js/main.1958ca15.js"
+    "static/js/main.81160706.js"
   ]
 }
