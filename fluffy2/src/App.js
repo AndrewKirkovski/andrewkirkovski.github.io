@@ -114,7 +114,7 @@ function App() {
             connectingAudio.addEventListener('ended', function () {
                 setTimeout(() => {
                     connectingAudio.play();
-                }, 5000);
+                }, 7000);
             })
             connectingAudio.play();
         }
@@ -157,7 +157,7 @@ function App() {
                 </button>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
-                <p>build 007</p>
+                <p>build 008</p>
             </header>
         </div>
     );
