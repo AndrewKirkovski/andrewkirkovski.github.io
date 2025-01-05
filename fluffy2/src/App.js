@@ -24,8 +24,8 @@ laterAudio.load();
 
 connectingAudio.volume = 0;
 musicAudio.volume = 0;
-errorAudio.volume = 0.7;
-laterAudio.volume = 0.7;
+errorAudio.volume = 1;
+laterAudio.volume = 1;
 
 const AGENT_ID = 'pvzY8rKHqL2Aror6te57';
 
@@ -46,7 +46,9 @@ function App() {
             setInCall(false);
             setPlayTone(true);
             setHasError(true);
-            laterAudio.play();
+            setTimeout(()=>{
+                laterAudio.play();
+            }, 500)
         },
         onMessage: (p) => console.log('message', p),
         onTyping: (p) => console.log('typing', p),
@@ -56,7 +58,10 @@ function App() {
             setInCall(false);
             setPlayTone(true);
             setHasError(true);
-            errorAudio.play();
+
+            setTimeout(()=>{
+                errorAudio.play();
+            }, 500)
         },
     });
     const conversationId = useRef('');
@@ -68,7 +73,7 @@ function App() {
             musicAudio.volume = 0;
         }
         if (playTone && !hasError) {
-            connectingAudio.volume = 0.7;
+            connectingAudio.volume = 1;
         } else {
             connectingAudio.volume = 0;
         }
@@ -109,7 +114,7 @@ function App() {
             connectingAudio.addEventListener('ended', function () {
                 setTimeout(() => {
                     connectingAudio.play();
-                }, 10000);
+                }, 5000);
             })
             connectingAudio.play();
         }
@@ -152,7 +157,7 @@ function App() {
                 </button>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
-                <p>build 006</p>
+                <p>build 007</p>
             </header>
         </div>
     );
