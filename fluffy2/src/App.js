@@ -24,6 +24,8 @@ laterAudio.load();
 
 connectingAudio.volume = 0;
 musicAudio.volume = 0;
+errorAudio.volume = 0.7;
+laterAudio.volume = 0.7;
 
 const AGENT_ID = 'pvzY8rKHqL2Aror6te57';
 
@@ -61,12 +63,12 @@ function App() {
 
     useEffect(() => {
         if (playTone) {
-            musicAudio.volume = 0.5;
+            musicAudio.volume = 0.6;
         } else {
             musicAudio.volume = 0;
         }
         if (playTone && !hasError) {
-            connectingAudio.volume = 0.5;
+            connectingAudio.volume = 0.7;
         } else {
             connectingAudio.volume = 0;
         }
@@ -150,7 +152,7 @@ function App() {
                 </button>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
-                <p>build 005</p>
+                <p>build 006</p>
             </header>
         </div>
     );
