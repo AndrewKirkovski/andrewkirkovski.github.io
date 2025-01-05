@@ -90,7 +90,9 @@ function App() {
                 } catch (e) {
                     console.error(e);
                     setHasError(true);
-                    errorAudio.play();
+                    setTimeout(()=>{
+                        errorAudio.play();
+                    }, 500);
                 }
             }
             startCall();
@@ -157,7 +159,7 @@ function App() {
                 </button>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
-                <p>build 008</p>
+                <p>build 009</p>
             </header>
         </div>
     );
