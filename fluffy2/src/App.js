@@ -29,26 +29,38 @@ laterAudio.volume = 1;
 
 const AGENT_ID = 'pvzY8rKHqL2Aror6te57';
 
+const listenToMic = async () => {
+    await navigator.permissions.query({ name: 'microphone' })
+    const media = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+}
+
 function App() {
     const audioStarted = useRef(false);
+    const micIsListening = useRef(false);
+    const manuallyClosed = useRef(false);
     const [hasError, setHasError] = useState(false);
     const [inCall, setInCall] = useState(false);
     const [playTone, setPlayTone] = useState(false);
     const [buttonActive, setButtonActive] = useState(false);
+
     const conversation = useConversation({
         onConnect: (p) => {
             console.log('connected', p)
+            manuallyClosed.current = false;
             setPlayTone(false);
             setInCall(true)
             setHasError(false);
         },
         onDisconnect: (p) => {
+            console.log('disconnected', p)
             setInCall(false);
             setPlayTone(true);
-            setHasError(true);
-            setTimeout(()=>{
-                laterAudio.play();
-            }, 500)
+            if(!manuallyClosed.current) {
+                setHasError(true);
+                setTimeout(()=>{
+                    laterAudio.play();
+                }, 500)
+            }
         },
         onMessage: (p) => console.log('message', p),
         onTyping: (p) => console.log('typing', p),
@@ -83,14 +95,16 @@ function App() {
         }
     }, [playTone, hasError]);
 
+
     useEffect(() => {
         if (buttonActive) {
             const startCall = async () => {
+                manuallyClosed.current = false;
                 try {
-                    // request user michrophone
-                    await navigator.permissions.query({name: 'microphone'})
-                    await navigator.mediaDevices.getUserMedia({audio: true, video: false});
-                    conversationId.current = await conversation.startSession({agentId: AGENT_ID});
+                    // request user microphone
+                    conversationId.current = await conversation.startSession({
+                        agentId: AGENT_ID
+                    });
                 } catch (e) {
                     console.error(e);
                     setHasError(true);
@@ -101,6 +115,7 @@ function App() {
             }
             startCall();
         } else {
+            manuallyClosed.current = true;
             conversation.endSession();
             setPlayTone(true);
             setInCall(false);
@@ -114,6 +129,10 @@ function App() {
             clearTimeout(throttleTimer.current);
         }
         setButtonActive(true);
+        if(!micIsListening.current) {
+            micIsListening.current = true;
+            listenToMic();
+        }
         if (!audioStarted.current) {
             audioStarted.current = true;
             musicAudio.play();
@@ -163,7 +182,7 @@ function App() {
                 </button>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
-                <p>build 010</p>
+                <p>build 011</p>
             </header>
         </div>
     );
