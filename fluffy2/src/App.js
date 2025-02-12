@@ -27,7 +27,8 @@ musicAudio.volume = 0;
 errorAudio.volume = 1;
 laterAudio.volume = 1;
 
-const AGENT_ID = 'pvzY8rKHqL2Aror6te57';
+const SFW_AGENT_ID = 'pvzY8rKHqL2Aror6te57';
+const NSFW_AGENT_ID = 'vBPDz3kF8nAfFEyA2KKI';
 
 const listenToMic = async () => {
     await navigator.permissions.query({ name: 'microphone' })
@@ -42,6 +43,7 @@ function App() {
     const [inCall, setInCall] = useState(false);
     const [playTone, setPlayTone] = useState(false);
     const [buttonActive, setButtonActive] = useState(false);
+    const [selectedAgent, setSelectedAgent] = useState(SFW_AGENT_ID);
 
     const conversation = useConversation({
         onConnect: (p) => {
@@ -103,7 +105,7 @@ function App() {
                 try {
                     // request user microphone
                     conversationId.current = await conversation.startSession({
-                        agentId: AGENT_ID
+                        agentId: selectInput.current.value
                     });
                 } catch (e) {
                     console.error(e);
@@ -170,16 +172,24 @@ function App() {
         });
     });
 
+    const selectInput = useRef(null);
+
     return (
         <div className="App"
 
         >
             <header className="App-header">
                 <img src={inCall ? boykisser : boykisser2} className="App-logo" alt="logo"/>
-                <p>Press and hold 'a' or 'b' button to talk</p>
-                <button onPointerDown={throttleKeyPressed}
-                        onPointerUp={throttleKeyReleased}>This one works too
+                <button style={{padding: '10px'}} onPointerDown={throttleKeyPressed}
+                        onPointerUp={throttleKeyReleased}>HOLD TO TALK
                 </button>
+                <br/>
+                <br/>
+                <select style={{padding: '10px 20px'}} ref={selectInput} defaultValue={selectedAgent}>
+                    <option style={{padding: '10px'}} value={SFW_AGENT_ID}>SFW</option>
+                    <option style={{padding: '10px'}} value={NSFW_AGENT_ID}>NSFW</option>
+                </select>
+                <br/>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
                 <p>build 011</p>
