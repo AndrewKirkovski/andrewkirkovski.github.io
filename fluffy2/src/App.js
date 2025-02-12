@@ -192,7 +192,7 @@ function App() {
                 <br/>
                 <p>{buttonActive ? 'Phone is ON' : 'Phone is OFF'}</p>
                 <p>{hasError ? 'Error' : 'Ready'}</p>
-                <p>build 011</p>
+                <p>build 012</p>
             </header>
         </div>
     );
